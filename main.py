@@ -12,8 +12,12 @@ eldritch_blast = Damage(d10=1, flat=3)
 standard_attack = [eldritch_blast, hex]
 cursed_attack = [eldritch_blast, hex, hexblade_curse]
 
-martin = Attack(standard_attack, attacks=1, attack_mod=5, crit_range=20)
+martin = Attack(standard_attack, attacks=1, attack_mod=5, crit_range=20,
+                halfluck=True)
 run_sim(martin)
 
-martin = Attack(cursed_attack, attacks=1, attack_mod=5, crit_range=19)
+print("\n")
+
+martin = Attack(cursed_attack, attacks=1, attack_mod=5, crit_range=19,
+                halfluck=True)
 run_sim(martin)
