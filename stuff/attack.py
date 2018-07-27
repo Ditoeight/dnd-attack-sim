@@ -27,6 +27,7 @@ class Attack():
                 poproll = random.randint(1,20)
                 if poproll == 1 and halfluck > 0:
                     poproll = random.randint(1,20)
+                    halfluck -= 1
                 d20s.append(poproll)
 
             if self.advantage == -1: # Disadvantage
